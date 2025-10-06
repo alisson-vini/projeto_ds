@@ -183,6 +183,51 @@ main{
     display: block;
 }
 
+/* FOOTER */
+
+footer {
+    background-color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 25px 0;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9em;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #22C55E;
+}
+
 
 @media (max-width: 820px) {
 
@@ -223,6 +268,16 @@ main{
 
     .container_caixas_input{
         width: 80%;
+    }
+
+    /* footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-links {
+        justify-content: center;
     }
 
 }
