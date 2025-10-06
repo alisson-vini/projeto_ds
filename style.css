@@ -1,3 +1,9 @@
+/*
+
+    CONFIGURAÇÕES INICIAIS
+
+*/
+
 body{
     margin: 0px;
     padding: 0px;
@@ -8,20 +14,27 @@ body{
 
 header{
     margin: 72px auto 135px auto;
-    max-width: 1400px;
+    max-width: 1200px;
+    padding: 0px 30px;
 }
 
 main{
-    margin: 0px auto 0px auto;
-    max-width: 1400px;
+    margin: 0px auto;
+    max-width: 1200px;
 }
+
+/*
+
+    BARRA DE NAVEGAÇÃO
+
+*/
 
 .barra_externa_navegação{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style: none;
-
-    margin: 0px 100px;
+    gap: 50px;
     padding: 0px;
 }
 
@@ -29,11 +42,16 @@ main{
     text-decoration: none;
     color: black;
     font-size: 1.2em;
+    white-space: nowrap;
+}
+
+.barra_externa_navegação > *{
+    flex-basis: 140px;
 }
 
 #logo_lumi{
-    flex-basis: 140px;
     flex-grow: 0;
+    flex-shrink: 0;
 }
 
 #logo_lumi > img{
@@ -45,6 +63,7 @@ main{
     border-radius: 4px;
     padding: 10px 25px;
     color: white;
+    box-sizing: border-box;
 }
 
 .barra_interna_navegação{
@@ -55,6 +74,12 @@ main{
 
     margin: 0px;
     padding: 0px;
+}
+
+.barra_interna_navegação > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .barra_interna_navegação > li > a{
@@ -73,7 +98,7 @@ main{
 
 
 
-#container_gerar_roteiro{
+#container_gerar_roteiro{ /* container para os inputs e para a imagem */
     width: 92%;
     margin: auto;
     display: flex;
@@ -85,7 +110,7 @@ main{
     flex-basis: 500px;
 }
 
-.caixa_informacao_roteiro{
+.caixa_informacao_roteiro{ /* container para a parte dos inputs + textos */
     display: flex;
     flex-direction: column;
 }
@@ -96,7 +121,7 @@ main{
     margin: 0px;
 }
 
-.container_caixas_input{
+.container_caixas_input{ /* especificamente para a caixa que contem os dois inputs */
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -108,7 +133,7 @@ main{
     box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-.caixa_input_roteiro{
+.caixa_input_roteiro{ /* especificações para o input dentro da caixa (vai conter uma imagem e um input) */
     display: flex;
     gap: 4px;
     justify-content: center;
@@ -120,29 +145,22 @@ main{
     border-radius: 10px;
 }
 
-.caixa_input_roteiro > input{
+.caixa_input_roteiro > input{ /* para o input */
     height: 2em;
     width: 80%;
     height: 100%;
     border: none;
 }
 
-.caixa_input_roteiro > input{
-    height: 2em;
-    width: 80%;
-    height: 100%;
-    border: none;
-}
-
-.caixa_input_roteiro > input:focus{
+.caixa_input_roteiro > input:focus{ /* quando a caixa for selecionada */
     outline: none;
 }
 
-.caixa_input_roteiro > span{
+.caixa_input_roteiro > span{ /* para o icone ao lado da caixa de input */
     color: rgba(78, 78, 78, 0.9); 
 }
 
-#botao_gerar_roteiro{
+#botao_gerar_roteiro{ /* botão de gerar o roteiro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,7 +174,7 @@ main{
     border-radius: 10px;
 }
 
-.iamgem_gerar_roteiro{
+.iamgem_gerar_roteiro{ /* imagem ao lado da caixa de input */
     width: 100%;
     flex-grow: 0;
     display: block;
