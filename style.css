@@ -47,12 +47,11 @@ main{
 }
 
 .barra_externa_navegação > *{
-    flex-basis: 140px;
+    flex: 0 1 120px;
 }
 
 #logo_lumi{
-    flex-grow: 0;
-    flex-shrink: 0;
+    flex: 0 0 160px;
 }
 
 #logo_lumi > img{
@@ -61,13 +60,22 @@ main{
 
 #novo_roteiro_menu_superior{
     background-color: #22C55E;
+    display: inline-flex;
     border-radius: 4px;
-    padding: 10px 25px;
+    padding: 5px 20px;
     display: block;
     color: white;
     box-sizing: border-box;
     border: none;
+    font-size: 1.1em;
 }
+
+#novo_roteiro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .barra_interna_navegação{
     display: flex;
@@ -245,8 +253,13 @@ footer {
         gap: 17px;
     }
 
+    #novo_roteiro_menu_superior{
+        padding: 8px 17px;
+        font-size: 1em;
+    }
+
     .novo_roteiro_menu_superior{
-        display: none;
+        padding: 0px;
     }
 
     .barra_interna_navegação{
